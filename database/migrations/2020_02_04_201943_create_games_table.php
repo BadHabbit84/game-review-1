@@ -18,7 +18,7 @@ class CreateGamesTable extends Migration
             $table->string('name', 100);
             $table->string('publisher', 100);
             $table->string('release_date');
-            $tbale->string('encryption_key');
+            $table->string('encryption_key');
             $table->timestamps();
         });
     }
