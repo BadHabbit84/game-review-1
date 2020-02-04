@@ -15,6 +15,10 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name', 100);
+            $table->string('publisher', 100);
+            $table->string('release_date');
+            $tbale->string('encryption_key');
             $table->timestamps();
         });
     }
