@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::post('get-games', 'APIController@getGames');
 Route::post('get-users', 'APIController@getUsers');
 Route::post('get-comments/{user_name}', 'APIController@getComments');
