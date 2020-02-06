@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Best Games(2019)</title>
+        <title>Game List</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -16,11 +16,22 @@
     </head>
     <body>
         <div class="container">
-            <h3 class="text-center mt-4">25 Best Games in 2019</h3>
+            <h3 class="text-center mt-4 mb-4">Game List</h3>
 
             <!-- list of games DIV -->
             <div class="">
-                
+                @if($all_games)
+                    @foreach($all_games as $game)
+                        <div class="col-md-12">
+                            <p>Name: {{$game->name}}</p>
+                            <p>Publisher: {{$game->publisher}}</p>
+                            <p>Release Date: {{$game->release_date}}</p>                          
+                        </div>
+                        <hr />
+                    @endforeach
+                @else 
+                    <h5 class="text-center">No games found</h5>
+                @endif
             </div>
         </div>
     </body>
